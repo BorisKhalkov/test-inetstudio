@@ -8,7 +8,7 @@ const state = {
 			title: 'Brunch this weekend?',
 			subtitle: `<span class="text--primary">Ali Connors</span> &mdash; I'll be in your neighborhood doing errands this weekend. Do you want to hang out?`,
 			address: {
-				country: 'russia',
+				country: 'Russia',
 				city: 'Novosibirsk',
 			},
 			score: 10,
@@ -19,7 +19,7 @@ const state = {
 			title: 'Summer BBQ <span class="grey--text text--lighten-1">4</span>',
 			subtitle: `<span class="text--primary">to Alex, Scott, Jennifer</span> &mdash; Wish I could come, but I'm out of town this weekend.`,
 			address: {
-				country: 'usa',
+				country: 'Usa',
 				city: 'New York',
 			},
 			score: 5,
@@ -30,7 +30,7 @@ const state = {
 			title: 'Oui oui',
 			subtitle: '<span class="text--primary">Sandra Adams</span> &mdash; Do you have Paris recommendations? Have you ever been?',
 			address: {
-				country: 'russia',
+				country: 'Russia',
 				city: 'Moscow',
 			},
 			score: 15,
@@ -41,7 +41,7 @@ const state = {
 			title: 'Birthday gift',
 			subtitle: '<span class="text--primary">Trevor Hansen</span> &mdash; Have any ideas about what we should get Heidi for her birthday?',
 			address: {
-				country: 'usa',
+				country: 'Usa',
 				city: 'San Francisco',
 			},
 			score: 25,
@@ -52,41 +52,30 @@ const state = {
 			title: 'Recipe to try',
 			subtitle: '<span class="text--primary">Britta Holt</span> &mdash; We should eat this: Grate, Squash, Corn, and tomatillo Tacos.',
 			address: {
-				country: 'russia',
+				country: 'Russia',
 				city: 'Saint-Petersburg',
 			},
 			score: 5,
 		},
 	],
 	isLoading: false,
-	error: null,
-	country: [
-		'russia',
-		'usa'
-	],
-	score: [
-		'> 20',
-		'< 10'
-	]
+	error: null
+}
+
+export const getterTypes = {
 }
 
 const getters = {
-	getUsersByCountry(state, country) {
-		return state.data.filter((item) => item.address.country === country);
-	},
-	getUsersByScore(state, score) {
-		return state.data.filter((item) => item.score === score);
-	}
 }
 
 export const actionTypes = {
-	getUsers: "[users] getUsers",
+	getUsers: "[users] getUsers"
 }
 
 export const mutationTypes = {
 	getUsersStart: "[users] getUsersStart",
 	getUsersSuccess: "[users] getUsersSuccess",
-	getUsersFailure: "[users] getUsersFailure",
+	getUsersFailure: "[users] getUsersFailure"
 }
 
 const mutations = {
