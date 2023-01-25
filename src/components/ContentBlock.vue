@@ -12,16 +12,18 @@
 
       <UsersList v-if="users" />
 
+      <ModalVue :address="address"/>
+
     </v-row>
   </v-container>
   </div>
 </template>
 
 <script>
-// import { gettersTypes } from '@/store/modules/users';
 import { mapState } from 'vuex';
 import FiltersVue from '@/components/FiltersVue.vue';
-import UsersList from '@/components/UsersList';
+import UsersList from '@/components/UsersList.vue';
+import ModalVue from './ModalVue.vue';
 
 
 export default {
@@ -30,32 +32,13 @@ export default {
   components: {
     UsersList,
     FiltersVue,
+    ModalVue
   },
-
-  // data: () => ({
-  //   variant: 'default',
-  // }),
 
   computed: {
     ...mapState({
-      // isLoading: state => state.users.isLoading,
       users: state => state.users.data,
-      // error: state => state.users.error,
-      // country: state => state.users.country,
-      // score: state => state.users.score,
     }),
   },
-
-  // mounted() {
-  //   this.fetchUsers();
-  // },
-
-  // methods: {
-  //   fetchUsers() {
-  //     if (!this.users){
-  //       this.$store.dispatch(actionTypes.getUsers)
-  //     }
-  //   },
-  // }
 }
 </script>
