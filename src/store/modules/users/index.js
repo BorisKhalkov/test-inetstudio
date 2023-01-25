@@ -59,13 +59,18 @@ const state = {
 		},
 	],
 	isLoading: false,
-	error: null
+	error: null,
+	address: '',
 }
 
 export const getterTypes = {
+	getUserAddress: "[users] getUserAddress"
 }
 
 const getters = {
+	[getterTypes.getUserAddress](state, data) {
+		state.address = data;
+	}
 }
 
 export const actionTypes = {

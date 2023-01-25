@@ -12,8 +12,6 @@
 
       <UsersList v-if="users" />
 
-      <ModalVue :address="address"/>
-
     </v-row>
   </v-container>
   </div>
@@ -23,7 +21,6 @@
 import { mapState } from 'vuex';
 import FiltersVue from '@/components/FiltersVue.vue';
 import UsersList from '@/components/UsersList.vue';
-import ModalVue from './ModalVue.vue';
 
 
 export default {
@@ -32,7 +29,6 @@ export default {
   components: {
     UsersList,
     FiltersVue,
-    ModalVue
   },
 
   computed: {
